@@ -8,7 +8,7 @@ export default function TheDice({ onClick }) {
             <img
                 className="diceImg"
                 src="../../images/icon-dice.svg"
-                alt="dice image"
+                
             />
         </button>
     );
