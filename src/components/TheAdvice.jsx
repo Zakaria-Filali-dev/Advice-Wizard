@@ -71,7 +71,8 @@ return (
                             <div className="advice-container">
                             <div>#{advice.id}</div>
                             <div>
-                                <b className="quoteMarks">“</b> {advice.advice}
+                                <b className="quoteMarks">“</b>
+                                    {advice.advice}
                                 <b className="quoteMarks">”</b>
                             </div>
                             
