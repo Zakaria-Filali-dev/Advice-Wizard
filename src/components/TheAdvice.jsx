@@ -49,11 +49,15 @@ export default function TheAdvice() {
             ]
         )
     }
-}
+    }
+    
+    const deleteFavs = () => {
+        setFav([])
+    }
 
 return (
     <>
-            <ShowFav favList={fav} />
+            <ShowFav favList={fav} deleteFavs={deleteFavs} />
             
             <div className="theContainer" style={{ position: 'relative' }}>
 
@@ -61,7 +65,8 @@ return (
     <LoadingTruck />
 ): advice ? (
     <>
-    <AddToFav onClick={handleFav} />
+                        <AddToFav   onClick={handleFav}
+                        />
                             
                             <div className="advice-container">
                             <div>#{advice.id}</div>

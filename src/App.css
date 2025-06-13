@@ -661,6 +661,34 @@ body {
   text-align: left;
 }
 
+.deleteFavs-btn {
+  background: #ff4d4f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  margin-right: 0.7rem;
+  box-shadow: 0 2px 8px rgba(255, 77, 79, 0.12);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.deleteFavs-btn:hover {
+  background: #d9363e;
+  transform: scale(1.06);
+  box-shadow: 0 4px 16px rgba(255, 77, 79, 0.18);
+}
+
+.deleteFavs-btn:active {
+  background: #b71c1c;
+}
+
 @media (max-width: 600px) {
   .FavList {
     min-width: 220px;

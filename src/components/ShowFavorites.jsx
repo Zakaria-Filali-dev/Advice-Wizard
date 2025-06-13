@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function ShowFav({favList}) {
+export default function ShowFav({favList, deleteFavs}) {
     const [showFav,setShowFav]=useState(false)
 
 
@@ -26,14 +26,24 @@ export default function ShowFav({favList}) {
                     {favList.length === 0 ? (
                         <p>No favorites yet.</p>
                     ) : (
-                        favList.map((advice) => (
+                        <>
+                        {favList.map((advice) => (
                             <div key={advice.id} className="favAdvice">
                                 <ul>
                                     <b># {advice.id} :</b>
                                     <b> "</b> {advice.advice} <b>"</b> 
                                 </ul>
                             </div>
-                        ))
+                        ))}
+                        <button
+                            onClick={deleteFavs}
+                            className="deleteFavs-btn"
+                            title="Clear all favorites"
+                            style={{alignSelf: 'center', marginTop: '1rem'}}
+                        >
+                            <span role="img" aria-label="trash">🗑️</span> Clear All
+                        </button>
+                        </>
                     )}
                 </div>
             }
