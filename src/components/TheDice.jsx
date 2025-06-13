@@ -1,3 +1,5 @@
+import diceImg from "../images/icon-dice.svg";
+
 export default function TheDice({ onClick }) {
     return (
         <button
@@ -7,8 +9,7 @@ export default function TheDice({ onClick }) {
         >
             <img
                 className="diceImg"
-                src="../../images/icon-dice.svg"
-                
+                src={diceImg}
             />
         </button>
     );
