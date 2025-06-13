@@ -34,7 +34,7 @@ Users would be able to:
 
 ### Links
 
-- Solution URL: [The solution URL here]([https://your-solution-url.com](https://www.frontendmentor.io/solutions/advice-generator-app-NmMObRJ6Y-))
+- Solution URL: [The solution URL here](https://www.frontendmentor.io/solutions/advice-generator-app-NmMObRJ6Y-)
 - Live Site URL: [The Live Site Here]((https://zakaria-filali-dev.github.io/Advice-Wizard/))
 
 ## My process
