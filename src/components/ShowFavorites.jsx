@@ -1,12 +1,26 @@
-import { useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 
 export default function ShowFav({favList, deleteFavs}) {
-    const [showFav,setShowFav]=useState(false)
+    const [showFav, setShowFav] = useState(false);
+    const favListRef = useRef(null);
 
+    // Hide the card when clicking outside
+    useEffect(() => {
+        if (!showFav) return;
+        function handleClickOutside(event) {
+            if (favListRef.current && !favListRef.current.contains(event.target)) {
+                setShowFav(false);
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [showFav]);
 
     const handleShow = () => {
-        setShowFav(!showFav)
-    }
+        setShowFav(!showFav);
+    };
 
     return (
         <>
@@ -22,7 +36,7 @@ export default function ShowFav({favList, deleteFavs}) {
                 </div>
             </label>
             {showFav &&
-                <div className="FavList">
+                <div className="FavList" ref={favListRef}>
                     {favList.length === 0 ? (
                         <p>No favorites yet.</p>
                     ) : (
